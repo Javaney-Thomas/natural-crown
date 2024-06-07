@@ -1,0 +1,147 @@
+/* try using flexbox iunstead iun the js file */
+.static-Homebar {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute items along the main axis with space-between */
+    background-color: red;
+    height: 52px;
+    align-items: center;
+}
+
+.app-Book {
+    align-items: flex-end;
+    display: flex;
+    justify-content: right;
+    float: left;
+}
+
+.logo {
+    display: flex;
+    height: 48px;
+    width: 48px;
+}
+.title-Crown {
+    padding: 10px;
+}
+
+.button-logo {
+    border: none;
+    background-color: transparent;
+    height: auto;
+}
+
+.static-header-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-left: 20px;
+    width: 50%;
+    max-width: 695px;
+    
+  }
+  
+  .static-header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: 30px;
+    width: 50%;
+    max-width: 695px;
+  }
+
+  .header-locale {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    display: flex;
+    color: white;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+
+
+/* .header-flexbox {
+    display: flex;
+    flex-direction: row;
+    height: 52px;
+    background-color: #000000;
+    color: white;
+    padding: 16px, 0px, 0px 16px ;
+    vertical-align: baseline;
+    border: 0%;
+    margin: 0%;
+  }
+.header-flexbox > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px; /* Adjust spacing as needed */
+  /* } */
+
+/* .icon {
+    margin-right: 8px;
+    color: #FAD700;
+    justify-content: space-evenly;
+    padding-left: 22px;
+  } */ 
+
+/* .contact-phone {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+} */
+/* .header-navbar{
+    display: block;
+    background-color: yellow;
+} */
+
+/* .navbar-logo {
+    color: red;
+} */
+
+/* .icon-color {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    color: #FAD700;
+}
+.addy-locale{
+    background: transparent;
+    white-space: no-wrap;
+    display:flexbox;
+    padding-left: 5%;
+    color: white;
+    font-size: 9px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    letter-spacing: 0em;
+}
+
+#vertical-line {
+    height: 50px;
+    width: 13px;
+    color: red;
+}
+
+.contact-phone{
+    padding-left: 5%;
+    display: flexbox;
+}
+.contact-phone span {
+    color: white;
+}
+
+.span-space {
+    padding-left: 5%;
+} */

@@ -1,0 +1,49 @@
+/* .second-bar {
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: red;
+} */
+
+.slogan-Text {
+    position: absolute;
+}
+.figure-container{
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    display: flexbox;
+    width: 1600%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.fig-cap h1
+.fig-cap h3 {
+    position: absolute;
+    bottom: 4rem;
+    margin: 0 2rem;
+    color: yellow;
+    font-size: 2.5rem;
+}
+
+
+
+/* .menu{
+   
+    display:flex ;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.btn-styles {
+    flex-direction: row;
+    margin-left: 25px;
+    background-color: blue;
+    color: red;
+}
+
+ */
+
