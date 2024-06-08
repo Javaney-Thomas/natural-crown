@@ -16,12 +16,12 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
 
     return (
         <>
-            <Navbar bg="dark" variant="dark" expand="lg" className="static-homebar">
+            <Navbar bg="dark" variant="dark" expand="lg" className="homebar">
                 <Container fluid>
-                    <Button  className="button-logo" variant="black" onClick={handleShow}>
+                    <Button className="logo-btn" variant="black" onClick={handleShow}>
                         <img src={crown} alt='Crown' className='logo'/>
                     </Button>
-                    <Navbar.Brand className="title-Crown" href="#">Crowned-Naturally</Navbar.Brand>
+                    <Navbar.Brand className="homebar-brandname" href="#">Crowned-Naturally</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbar-nav" />
                     <Navbar.Collapse id="navbar-nav">
                         <Nav className="mr-auto">

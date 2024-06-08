@@ -1,5 +1,5 @@
 /* try using flexbox iunstead iun the js file */
-.static-Homebar {
+.homebarh {
     display: flex; /* Use flexbox layout */
     justify-content: space-between; /* Distribute items along the main axis with space-between */
     background-color: red;
@@ -19,11 +19,11 @@
     height: 48px;
     width: 48px;
 }
-.title-Crown {
+.homebar-brandname {
     padding: 10px;
 }
 
-.button-logo {
+.logo-btn {
     border: none;
     background-color: transparent;
     height: auto;
