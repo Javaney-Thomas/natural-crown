@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import './Footer.css';
+import leavesbck3 from '../materials/leavesbck3.jpeg';
 
 export const Footer = () => {
         const [name, setName] = useState("");
@@ -16,6 +17,7 @@ export const Footer = () => {
   return (
     <footer className='fg-back'>
         <div>
+            <img src={leavesbck3} alt='img'></img>
             <h1>Empowered by The Kairos Family</h1>
             <h1>Subscribe to Our NewsLetter</h1>
             <h3>Subscribe to our newsletter to stay updated</h3>
