@@ -24,19 +24,27 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
                     <Navbar.Brand className="homebar-brandname" href="#">Crowned-Naturally</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbar-nav" />
                     <Navbar.Collapse id="navbar-nav">
-                        <Nav className="mr-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
+                        
+                        <div className='cstmr-contact'>
+                          <Nav className="mr-auto">
                             <Nav.Link href="#about">About Us</Nav.Link>
                             <NavDropdown title="Contact" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#email">Email</NavDropdown.Item>
                                 <NavDropdown.Item href="#call">Call Us</NavDropdown.Item>
                                 <NavDropdown.Item href="#faqs">FAQ's</NavDropdown.Item>
                             </NavDropdown>
-                        </Nav>
-                        <Form inline>
+                        </Nav>  
+                        </div>
+
+                        <div className='searchbar'>
+                            <Form inline>
                             <Form.Control type="search" placeholder="Search" className="mr-sm-2" />
-                        </Form>
-                        <Button className='app-Book'>Book An Appointment</Button>
+                            </Form> 
+                        </div>
+
+                        <div className='appntmnt-btn'>
+                         <Button className='app-Book'>Book An Appointment</Button>   
+                        </div> 
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

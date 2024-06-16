@@ -1,3 +1,26 @@
+.backlayr {
+    display: flex;
+    width: 100%;
+}
+
+.sections {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .second-bar {
     display: block;
     justify-content: space-evenly;
@@ -5,31 +28,49 @@
     background-color: red;
 } */
 
-.slogan-Text {
-    position: absolute;
-}
-.figure-container{
+/* .bckgr-image{
     position: relative;
     width: 100%;
 }
 
-.image-container img {
-    display: flexbox;
-    width: 1600%;
-    height: 450px;
-    object-fit: cover;
+.back-img {
+    opacity: 0.6;
 }
 
-.fig-cap h1
-.fig-cap h3 {
+.second-lvl img {
+    display: flex;
+    width: 1600%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50px;
+    flex-direction: row;
+}
+
+.img-cap {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+    flex-wrap: wrap;
     position: absolute;
-    bottom: 4rem;
-    margin: 0 2rem;
-    color: yellow;
+    top: 2%;
+    margin: 0;
+    color: red;
     font-size: 2.5rem;
 }
 
+.prd-seven{
+    display: flex;
+    flex: 0.5;
+    height: 20%;
+    width: 20%;
+    flex-direction: row;
+}
 
+.prd-multi{
+    display: flex;
+    flex: 0.5;
+    flex-direction: row;
+} */
 
 /* .menu{
    

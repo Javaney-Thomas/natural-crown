@@ -7,6 +7,18 @@
     align-items: center;
 }
 
+.searchbar{
+    display: flex;
+    flex: 1;
+    background-color: white;
+    border-radius: 7px;
+}
+.appntmnt-btn{
+    display: flex;
+    flex: .5;
+    padding-left: 5%;
+
+}
 .app-Book {
     align-items: flex-end;
     display: flex;

@@ -1,0 +1,23 @@
+<img className='back-img' src={leavesbck2} alt='img' style={{ width: '100%', height: 'auto' }} />
+  <div>
+    <div className='prd-seven'>
+      <img src={prd7} alt='prd7'></img>
+    </div>
+      <div className='prd-multi'>
+        <img src={prd6} alt='prd6'></img>
+        <img src={prd8} alt='prd8'></img>
+      </div>
+      <div className='img-cap'>
+          <h1>Why Crowned Naturally?</h1>
+          <h3>
+            Crowned Naturally is a brand created with nature at its core. 
+            We created a creme that is moisturizing and safe to use firmly 
+            head to toe.It will leave your skin and hair nourished and shiny 
+            with its blend of Shea and mango butters along with the 
+            essential oils of argan, aloe, castor, and other healing oils provided by nature.
+            These ingredients are natural and safe for the whole family from the baby to grandma. 
+            The only side affects are smooth shiny and healthy skin.
+          </h3>
+      </div> 
+      </div>
+    </div>
