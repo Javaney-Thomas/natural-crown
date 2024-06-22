@@ -1,10 +1,11 @@
-/* try using flexbox iunstead iun the js file */
-.homebarh {
+/* try using flexbox instead in the js file */
+.homebar {
     display: flex; /* Use flexbox layout */
     justify-content: space-between; /* Distribute items along the main axis with space-between */
-    background-color: red;
-    height: 52px;
+    height: 64px;
     align-items: center;
+    position: sticky;
+    z-index: 10;
 }
 
 .searchbar{
@@ -15,9 +16,10 @@
 }
 .appntmnt-btn{
     display: flex;
-    flex: .5;
-    padding-left: 5%;
-
+    flex: 0.5;
+    padding-left: 2%;
+    flex-wrap: wrap;
+    position: relative;
 }
 .app-Book {
     align-items: flex-end;

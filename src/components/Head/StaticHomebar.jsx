@@ -24,7 +24,7 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
                     <Navbar.Brand className="homebar-brandname" href="#">Crowned-Naturally</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbar-nav" />
                     <Navbar.Collapse id="navbar-nav">
-                        
+
                         <div className='cstmr-contact'>
                           <Nav className="mr-auto">
                             <Nav.Link href="#about">About Us</Nav.Link>
@@ -38,7 +38,7 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
 
                         <div className='searchbar'>
                             <Form inline>
-                            <Form.Control type="search" placeholder="Search" className="mr-sm-2" />
+                            <Form.Control type="search" placeholder="Crown Your Future" />
                             </Form> 
                         </div>
 
