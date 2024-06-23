@@ -11,7 +11,6 @@ function App() {
     <Router>
       <StaticHomebar />
       <CarouselImages />
-      <ProductList />
       <SubHeader />
       <Footer />
       <Routes>
