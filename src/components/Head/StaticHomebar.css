@@ -26,12 +26,13 @@
     display: flex;
     justify-content: right;
     float: left;
+    color: black;
 }
 
 .logo {
     display: flex;
-    height: 48px;
-    width: 48px;
+    height: 70px;
+    width: 70px;
 }
 .homebar-brandname {
     padding: 10px;

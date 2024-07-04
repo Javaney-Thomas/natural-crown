@@ -1,4 +1,50 @@
+.footer-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
 .fg-back {
-    color: white;
-    background-color: rgb(139, 170, 53);
+    position: relative;
+    filter: brightness(90%);
+    width: 100%;
+    z-index: 0;
+}
+
+.contact-section {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.form-fill {
+    position: absolute;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px;
+}
+
+.form-group-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group-inline label {
+    width: 150px; 
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form-group-inline .form-control {
+    flex-grow: 1;
 }

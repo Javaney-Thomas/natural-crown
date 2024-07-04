@@ -9,6 +9,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import crown from '../materials/crown.jpg';
 
+
 const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -16,7 +17,7 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
 
     return (
         <>
-            <Navbar bg="dark" variant="dark" expand="lg" className="homebar">
+            <Navbar className="homebar">
                 <Container fluid>
                     <Button className="logo-btn" variant="black" onClick={handleShow}>
                         <img src={crown} alt='Crown' className='logo'/>
@@ -37,14 +38,18 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
                         </div>
 
                         <div className='searchbar'>
-                            <Form inline>
+                            <Form> {/*Has to search entire database*/}
                             <Form.Control type="search" placeholder="Crown Your Future" />
                             </Form> 
                         </div>
 
                         <div className='appntmnt-btn'>
-                         <Button className='app-Book'>Book An Appointment</Button>   
+                         <Button className='app-Book'>Book An Appointment</Button>  {/*Links us out to styleseat */}
                         </div> 
+
+                        <div className="cart-btn">
+                            <Button></Button>
+                        </div>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
@@ -53,19 +58,22 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
                     <Offcanvas.Title>Crowned Naturally</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
+
                     <Nav className="justify-content-end flex-grow-1 pe-3">
-                        <Nav.Link href="#action1" onClick={handleClose}>Home</Nav.Link>
-                        <Nav.Link href="#action2" onClick={handleClose}>About Us</Nav.Link>
+                        <Nav.Link href="#action1" onClick={handleClose}>Products</Nav.Link> {/* This has to scroll action to products section */}
+                        <Nav.Link href="#action2" onClick={handleClose}>About Us</Nav.Link> {/*Routes Us to About Page*/}
                         <NavDropdown title="Contact" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#email" onClick={handleClose}>Email</NavDropdown.Item>
                             <NavDropdown.Item href="#call" onClick={handleClose}>Call Us</NavDropdown.Item>
                             <NavDropdown.Item href="#faqs" onClick={handleClose}>FAQ's</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    <Form className="d-flex">
-                        <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
-                        <Button variant="outline-success">Search</Button>
+
+                    <Form className="d-flex">{/*Able to Search any product once keywords are entered */}
+                        <Form.Control type="search" placeholder="#LetsGlowUp" className="me-2" aria-label="Search" />
+                        <Button variant="outline-success">Search</Button> {/* This button has to actively search database*/}
                     </Form>
+
                 </Offcanvas.Body>
             </Offcanvas>
         </>
@@ -73,68 +81,4 @@ const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
 };
 
 export default StaticHomebar;
-
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faLocationDot, faPhone, faEnvelope, faInstagram, faLink } from '@fortawesome/free-solid-svg-icons'; // Or '@fortawesome/free-brands-svg-icons' for Instagram if you're using the brand icons
-// import { FaMapLocationDot } from "react-icons/fa6";
-// import { BsFillTelephoneFill } from "react-icons/bs";
-// import { SiMinutemailer } from "react-icons/si";
-// import { IoLogoInstagram } from "react-icons/io";
-// import { IconContext } from "react-icons";
-// import {faInstagram } from '@fortawesome/free-brands-svg-icons';
-//import { Link } from 'react-router-dom';
-//when you hover over the product there is a description of the product'
-//animation of page
-//keep all color codes
-
-/* <div className="static-header-left">
-                <span className="header-locale"
-                    onClick={()=> {
-                        setColor('black')
-                    }}
-                >
-                    <IconContext.Provider value={{className: "icon"}}>
-                        <FaMapLocationDot />
-                    </IconContext.Provider>
-                    5321 Clarendon Rd, Brooklyn NY 11203
-                </span>
-                <span className="header-locale">
-                <IconContext.Provider value={{className: "icon"}}>
-                        <BsFillTelephoneFill />
-                </IconContext.Provider>
-                    718-766-8819
-                </span>
-                <span className="header-locale">
-                <IconContext.Provider value={{className: "icon"}}>
-                        <SiMinutemailer />
-                </IconContext.Provider>
-                    crownednaturally@gmail.com
-                </span>
-            </div>
-
-            <div className="static-header-right">
-                <div className="link-icons">
-                    <span className="ig">
-                    <IconContext.Provider value={{className: "icon"}}>
-                        <IoLogoInstagram />
-                    </IconContext.Provider>
-                    </span>
-                </div>
-                    <span className="ig">
-                    <IconContext.Provider value={{className: "icon"}}>
-                        <IoLogoInstagram />
-                    </IconContext.Provider>
-                    </span>
-                    <span className="ig">
-                    <IconContext.Provider value={{className: "icon"}}>
-                        <IoLogoInstagram />
-                    </IconContext.Provider>
-                    </span>
-                    <span className="ig">
-                    <IconContext.Provider value={{className: "icon"}}>
-                        <IoLogoInstagram />
-                    </IconContext.Provider>
-                    </span>
-                </div> */
 

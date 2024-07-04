@@ -1,0 +1,37 @@
+.footer-container2 {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Background color of the footer */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for some space around the text */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-links2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .footer-sections2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .footer-sections2 ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-sections2 ul h2 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-sections2 ul li {
+    margin: 5px 0;
+  }
