@@ -9,6 +9,7 @@ import CarouselImages from './components/Carousel/CarouselImages';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Switch, Box, Typography } from "@mui/material";
+import ProductList from "./components/Products/ProductList";
 
 function App() {
   // state to manage the dark mode
@@ -33,17 +34,10 @@ function App() {
   });
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
       <Router>
-        <StaticHomebar />
-        <Box sx={{ display: 'flex', justifyContent: 'right', alignItems: 'center', padding: 1 }}>
-          <Typography variant="h6" sx={{ marginRight: 2 }}>
-            Toggle Dark Mode
-          </Typography>
-          <Switch checked={toggleDarkMode} onChange={toggleDarkTheme} />
-        </Box>
+        <StaticHomebar/>
         <CarouselImages />
+        <ProductList />
         <SubHeader />
         <Footer />
         <Footer2 />
@@ -51,7 +45,7 @@ function App() {
           <Route path="/" element={<div />} />
         </Routes>
       </Router>
-    </ThemeProvider>
+
   );
 }
 
