@@ -1,9 +1,9 @@
 .backlayr {
     display: flex;
     width: 100%;
-    position: relative;
     filter: brightness(90%);
 }
+/*position: relative;*/
 
 .sections {
     display: flex;

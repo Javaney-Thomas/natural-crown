@@ -11,8 +11,9 @@ import prd8 from '../materials/prd8.jpeg';
 
 const SubHeader = () => {
   return (
-    <div className='backlayr'>
-      <img src={leavesbck1} alt="bkgr1" style={{width: '100%', height: 'auto'}} />
+    <div className='backlayr'
+      style={{
+      backgroundImage: `url(${leavesbck1})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '100vh'}}>
 
       <div className='sections'>
         <div className="grid-container">

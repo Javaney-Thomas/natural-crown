@@ -10,6 +10,8 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Switch, Box, Typography } from "@mui/material";
 import ProductList from "./components/Products/ProductList";
+import Checkout from "./components/Checkingout/Checkout";
+
 
 function App() {
   // state to manage the dark mode
@@ -34,18 +36,26 @@ function App() {
   });
 
   return (
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
       <Router>
-        <StaticHomebar/>
-        <CarouselImages />
-        <ProductList />
-        <SubHeader />
-        <Footer />
-        <Footer2 />
+        <StaticHomebar />
         <Routes>
-          <Route path="/" element={<div />} />
+          <Route path="/" element={
+            <>
+              <CarouselImages />
+              <ProductList />
+              <SubHeader />
+              <Footer />
+              <Footer2 />
+            </>
+          } />
+          
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/ProductList" element={<ProductList/>} />
         </Routes>
       </Router>
-
+    </ThemeProvider>
   );
 }
 
