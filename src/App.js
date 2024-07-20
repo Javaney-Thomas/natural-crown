@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import './App.css';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import StaticHomebar from './components/Head/StaticHomebar';
-import SubHeader from './components/Head/SubHeader';
+import Header from "./components/Head/Header";
+import Header2 from "./components/Head/Header2";
+import CarouselImages from './components/Carousel/CarouselImages';
+import ProductList from "./components/Products/ProductList";
+import Whysection from "./components/Head/Whysection";
 import Footer from './components/Foot/Footer';
 import Footer2 from './components/Foot/Footer2';
-import CarouselImages from './components/Carousel/CarouselImages';
+import Checkout from "./components/Checkingout/Checkout";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Switch, Box, Typography } from "@mui/material";
-import ProductList from "./components/Products/ProductList";
-import Checkout from "./components/Checkingout/Checkout";
-import Header from "./components/Head/Header";
-import Header2 from "./components/Head/Header2";
+
+
+
 
 
 function App() {
@@ -46,7 +48,7 @@ function App() {
             <>
               <CarouselImages />
               <ProductList />
-              <SubHeader />
+              <Whysection />
               <Footer />
               <Footer2 /> 
             </>

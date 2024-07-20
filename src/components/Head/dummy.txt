@@ -461,3 +461,298 @@ const Header2 = () => {
 }
 
 export default Header2;
+
+
+--------------------------------------------------------------------------------------
+this is for the navbar side popout
+import React, { useState } from 'react';
+import './StaticHomebar.css';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import crown from '../materials/crown.jpg';
+import SearchIcon from '@mui/icons-material/Search';
+import AirlineSeatReclineExtraIcon from '@mui/icons-material/AirlineSeatReclineExtra';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import { Link } from 'react-router-dom';
+import { useStateValue } from '../../StateProvider';
+
+const StaticHomebar = ({ color, setColor, setLocationMenuVisible }) => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    const [{ cart }, dispatch] = useStateValue();
+
+    return (
+    <>
+    <div className="header">
+        <div className="header__logo" variant="black" onClick={handleShow}>
+            <Link to="/"><img src={crown} alt='Crown' className='logo'/></Link>
+            <Navbar>
+                <Navbar.Toggle aria-controls="navbar-nav" />
+                <Navbar.Collapse id="navbar-nav">
+                    <div className='header_contact'>
+                        <Nav className="mr-auto">
+                            <NavDropdown id="basic-nav-dropdown">
+                                <NavDropdown.Item href="#email">Email</NavDropdown.Item>
+                                <NavDropdown.Item href="#call">Call Us</NavDropdown.Item>
+                                <NavDropdown.Item href="#FAQ's">FAQ's</NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
+                    </div>
+                </Navbar.Collapse>
+            </Navbar>
+        </div>
+        {/* This is for the seachbar*/}
+        <div className='header_search'>
+            <input className="header_searchInput" type="text" placeholder="Crown Your Future" />
+            <SearchIcon className="header_searchIcon" />
+        </div>
+        {/* This is for the appointment button */}
+        <div className='header_appbtn'>
+            <a href="https://www.styleseat.com/m/v/MissQ2u" target="_blank" rel="noopener noreferrer">
+                <Button style={{ backgroundColor: '#FAD700', borderColor: '#131209', color: '#000' }}>Book An Appointment <AirlineSeatReclineExtraIcon /></Button>
+            </a>
+        </div> 
+        <div className='header_cart'>
+            <Link to="/Checkout">
+            <Button style={{ backgroundColor: '#FAD700', borderColor: '#131209', color: '#000' }}>Cart<ShoppingBagIcon />
+            <span>{cart?.length}</span>
+            </Button>  {/*DYnamically adds all products */}
+            </Link>
+            
+        </div> 
+    </div>
+    <Offcanvas show={show} onHide={handleClose} placement="end" className="offcanvas-background">
+        <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Crowned-Naturally</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                    <Nav.Link href="#action1" onClick={handleClose}><Link to="/ProductList">Products</Link></Nav.Link> {/* This has to scroll action to products section */}
+                    <Nav.Link href="#action2" onClick={handleClose}>About Us</Nav.Link> {/*Routes Us to About Page*/}
+                    <NavDropdown title="Contact" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="#email" onClick={handleClose}>Email</NavDropdown.Item>
+                        <NavDropdown.Item href="#call" onClick={handleClose}>Call Us</NavDropdown.Item>
+                        <NavDropdown.Item href="#faqs" onClick={handleClose}>FAQ's</NavDropdown.Item>
+                    </NavDropdown>
+                    </Nav>
+                    <Form className="d-flex">{/*Able to Search any product once keywords are entered */}
+                    <Form.Control type="search" placeholder="#LetsGlowUp" className="me-2" aria-label="Search" />
+                    <Button variant="outline-success">Search</Button> {/* This button has to actively search database*/}
+                    </Form>
+            </Offcanvas.Body>
+    </Offcanvas>
+    </>
+    );
+};
+
+export default StaticHomebar;
+ALL THE CSS 
+/* try using flexbox instead in the js file */
+/* .header {
+    display: flex; 
+    justify-content: center;
+    height: 50px;
+    padding: 0 20px;
+    align-items: center;
+    background-color: #8baa36;
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+} */
+
+/* .header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 60px;
+    height: 60px;
+}
+.header_search{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    border-radius: 24px;
+}
+
+.header_searchIcon{
+    padding: 5px;
+    height: 40px !important;
+    background-color:#FAD700;
+    cursor: pointer;
+}
+.header_searchInput{
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header_appbtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header_cart{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+} */
+
+/*Offcanvas background styling */
+.offcanvas-background {
+    background: url('../materials/alaxmatias.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.offcanvas-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 30, 30, 0.5); /* Adjust the opacity for dimming effect */
+    z-index: 1;
+}
+
+.offcanvas-background .offcanvas-body {
+    position: relative;
+    z-index: 2;
+    color: white; /* Ensure the text is readable */
+}
+
+
+
+
+
+/*.static-header-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-left: 20px;
+    width: 50%;
+    max-width: 695px;
+    
+  }
+  
+  .static-header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: 30px;
+    width: 50%;
+    max-width: 695px;
+  }
+
+  .header-locale {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12.5px;
+    display: flex;
+    color: white;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+
+
+/* .header-flexbox {
+    display: flex;
+    flex-direction: row;
+    height: 52px;
+    background-color: #000000;
+    color: white;
+    padding: 16px, 0px, 0px 16px ;
+    vertical-align: baseline;
+    border: 0%;
+    margin: 0%;
+  }
+.header-flexbox > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px; /* Adjust spacing as needed */
+  /* } */
+
+/* .icon {
+    margin-right: 8px;
+    color: #FAD700;
+    justify-content: space-evenly;
+    padding-left: 22px;
+  } */ 
+
+/* .contact-phone {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+} */
+/* .header-navbar{
+    display: block;
+    background-color: yellow;
+} */
+
+/* .navbar-logo {
+    color: red;
+} */
+
+/* .icon-color {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    color: #FAD700;
+}
+.addy-locale{
+    background: transparent;
+    white-space: no-wrap;
+    display:flexbox;
+    padding-left: 5%;
+    color: white;
+    font-size: 9px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    letter-spacing: 0em;
+}
+
+#vertical-line {
+    height: 50px;
+    width: 13px;
+    color: red;
+}
+
+.contact-phone{
+    padding-left: 5%;
+    display: flexbox;
+}
+.contact-phone span {
+    color: white;
+}
+
+.span-space {
+    padding-left: 5%;
+} */
+--------------------------

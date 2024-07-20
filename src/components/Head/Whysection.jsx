@@ -1,15 +1,15 @@
 import React from 'react'
-import Midpager from "../materials/Midpager.jpg"
+
 import leavesbck1 from '../materials/leavesbck1.jpeg';
 import { Container, Carousel } from 'react-bootstrap';
-import './SubHeader.css'
+import './Whysection.css'
 import prd6 from '../materials/prd6.jpeg';
 import prd7 from '../materials/prd7.jpeg';
 import prd8 from '../materials/prd8.jpeg';
 
 
 
-const SubHeader = () => {
+const Whysection = () => {
   return (
     <div className='backlayr'
       style={{
@@ -39,4 +39,4 @@ const SubHeader = () => {
   )
 }
 
-export default SubHeader
+export default Whysection
