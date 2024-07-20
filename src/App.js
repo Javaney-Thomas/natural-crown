@@ -11,6 +11,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { Switch, Box, Typography } from "@mui/material";
 import ProductList from "./components/Products/ProductList";
 import Checkout from "./components/Checkingout/Checkout";
+import Header from "./components/Head/Header";
+import Header2 from "./components/Head/Header2";
 
 
 function App() {
@@ -36,10 +38,9 @@ function App() {
   });
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
       <Router>
-        <StaticHomebar />
+        <Header />
+        <Header2 />
         <Routes>
           <Route path="/" element={
             <>
@@ -47,15 +48,13 @@ function App() {
               <ProductList />
               <SubHeader />
               <Footer />
-              <Footer2 />
+              <Footer2 /> 
             </>
           } />
-          
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/ProductList" element={<ProductList/>} />
         </Routes>
       </Router>
-    </ThemeProvider>
   );
 }
 

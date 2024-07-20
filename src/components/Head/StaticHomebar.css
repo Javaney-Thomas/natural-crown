@@ -2,7 +2,7 @@
 .header {
     display: flex; /* Use flexbox layout */
     justify-content: center;/* Distribute items along the main axis with space-between */
-    height: 90px;
+    height: 70px;
     padding: 0 20px;
     align-items: center;
     background-color: #8baa36;
