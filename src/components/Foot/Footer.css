@@ -1,50 +1,376 @@
-.footer-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
+/* Footer.css */
 
 .fg-back {
     position: relative;
-    filter: brightness(90%);
-    width: 100%;
-    z-index: 0;
-}
-
-.contact-section {
-    display: block;
-    flex-wrap: wrap;
+    display: flex;
     justify-content: space-between;
-
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden;
 }
-.form-fill {
+
+.background-image {
     position: absolute;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.8); 
-    border-radius: 8px;
-}
-
-.form-group-inline {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-image: url('../materials/leavesbck3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
-.form-group-inline label {
-    width: 150px; 
-    margin-right: 10px;
-    text-align: right;
+.leftsection {
+    flex: 0.5;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+}
+.bannerclr {
+    color: #FAD700;
+    font-size: 48px;
+    font-weight: 800;
+}
+.bannerheader h2, .bannerheader p {
+    color: white;
+    margin: 5px 0;
 }
 
-.form-group-inline .form-control {
-    flex-grow: 1;
+.linkssection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
 }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gif {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.gif h4{
+    color: white;
+}
+.gif p{
+    color: white;
+}
+.specgif {
+    height: 30px;
+    width: 30px;
+}
+
+.lastseticons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.icon-container {
+    display: flex;
+    padding: 5px;
+    border-radius: 50%;
+    background: white;
+    
+
+}
+
+.rightsection {
+    flex: 0.5;
+    padding: 30px;
+    background: rgba(0, 153, 96, 0.8);
+    border-radius: 10px;
+    
+}
+
+.form-fill {
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-fill h2 {
+    margin-bottom: 20px;
+}
+
+.form-fill .form-group {
+    margin-bottom: 15px;
+}
+
+.boxclr {
+    background-color: rgb(240, 249, 171);
+    margin-bottom: 10px;
+}
+
+.boxclr[as="textarea"] {
+    height: 100px; /* Adjust as needed */
+}
+
+.btnclr {
+    background-color: #FAD700;
+    border-color: #FAD700;
+    color: black;
+}
+
+.btnclr:hover {
+    background-color: #e6c200; /* Optional: set hover state color */
+    border-color: #e6c200;
+    color: black; /* Optional: set text color for hover state */
+}
+
+/* Media Queries */
+
+/* iPhone SE (375px x 667px) */
+@media (max-width: 375px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+}
+
+/* iPhone 12 Pro (390px x 844px) */
+@media (max-width: 390px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+}
+
+/* iPhone XR (414px x 896px) */
+@media (max-width: 414px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+}
+
+/* iPhone 14 Pro Max (430px x 932px) */
+@media (max-width: 430px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .column {
+        flex-direction: column;
+    }
+}
+
+/* iPad Mini (768px x 1024px) */
+@media (max-width: 768px) {
+    .fg-back {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .column {
+        flex-direction: row;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer.css */
+
+/* .fg-back {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.background-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.leftsection {
+    flex: 0.5;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+}
+.bannerclr {
+    color: #FAD700;
+    font-size: 48px;
+    font-weight: 800;
+}
+.bannerheader h2, .bannerheader p {
+    color: white;
+    margin: 5px 0;
+}
+
+.linkssection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.gif {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.specgif {
+    height: 30px;
+    width: 30px;
+}
+
+.lastseticons img {
+    margin: 5px;
+}
+
+.rightsection {
+    flex: 0.5;
+    padding: 20px;
+    background: rgb(0, 153, 96);
+    border-radius: 10px;
+} */
+/*The color for the form lines is f0f9ab*/
+
+/* .form-fill {
+    padding: 20px;
+    align-items: center;
+
+}
+
+
+.form-fill h2 {
+    margin-bottom: 20px;
+}
+
+.form-fill .form-group {
+    margin-bottom: 15px;
+}
+.boxclr {
+    color: rgb(240, 249, 171);
+}
+.btnclr {
+    background-color: #FAD700;
+} */
+/* Media Queries */
+
+/* iPhone SE (375px x 667px) */
+/* @media (max-width: 375px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} */
+
+/* iPhone 12 Pro (390px x 844px) */
+/* @media (max-width: 390px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} */
+
+/* iPhone XR (414px x 896px) */
+/* @media (max-width: 414px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} */
+
+/* iPhone 14 Pro Max (430px x 932px) */
+/* @media (max-width: 430px) {
+    .fg-back {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+} */
+
+/* iPad Mini (768px x 1024px) */
+/* @media (max-width: 768px) {
+    .fg-back {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+} */

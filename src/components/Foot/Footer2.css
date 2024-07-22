@@ -1,37 +1,241 @@
 .footer-container2 {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: #333; /* Background color of the footer */
-    color: white; /* Text color */
-    padding: 10px 0; /* Padding for some space around the text */
-    display: flex;
-    justify-content: center;
-  }
-  
-  .footer-links2 {
-    display: flex;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(139, 170, 53);
+  color: white; /* Text color */
+  padding: 10px 0; /* Padding for some space around the text */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.kairos-bnr {
+  padding: 20px;
+}
+
+.kairos-bnr h2 {
+  font-weight: 600;
+}
+
+.newsletter {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emailfill {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.emailfill form {
+  display: flex;
+  align-items: center;
+}
+
+.emailfill input {
+  padding: 10px;
+  border: 1px solid #FAD700;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.subscribe-btn {
+  background-color: #FAD700;
+  border: 1px solid #FAD700;
+  padding: 10px 20px;
+  margin-left: 5px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+.subscribe-btn:hover {
+  background-color: #e6c200; /* Optional: set hover state color */
+}
+
+/* Media Queries */
+
+/* iPhone SE (375px x 667px) */
+@media (max-width: 375px) {
+  .footer-container2 {
     flex-direction: column;
     align-items: center;
+  }
+
+  .kairos-bnr, .newsletter {
     width: 100%;
+    text-align: center;
   }
-  
-  .footer-sections2 {
-    display: flex;
-    justify-content: space-around;
+
+  .newsletter {
+    align-items: center;
+  }
+
+  .emailfill {
     width: 100%;
-    padding: 10px 0;
+    justify-content: center;
   }
-  
-  .footer-sections2 ul {
-    list-style-type: none;
-    padding: 0;
+
+  .emailfill form {
+    width: 100%;
+    flex-direction: column;
   }
-  
-  .footer-sections2 ul h2 {
+
+  .emailfill input, .subscribe-btn {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .emailfill input {
     margin-bottom: 10px;
   }
-  
-  .footer-sections2 ul li {
-    margin: 5px 0;
+}
+
+/* iPhone 12 Pro (390px x 844px) */
+@media (max-width: 390px) {
+  .footer-container2 {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .kairos-bnr, .newsletter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter {
+    align-items: center;
+  }
+
+  .emailfill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .emailfill form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .emailfill input, .subscribe-btn {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .emailfill input {
+    margin-bottom: 10px;
+  }
+}
+
+/* iPhone XR (414px x 896px) */
+@media (max-width: 414px) {
+  .footer-container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kairos-bnr, .newsletter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter {
+    align-items: center;
+  }
+
+  .emailfill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .emailfill form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .emailfill input, .subscribe-btn {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .emailfill input {
+    margin-bottom: 10px;
+  }
+}
+
+/* iPhone 14 Pro Max (430px x 932px) */
+@media (max-width: 430px) {
+  .footer-container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kairos-bnr, .newsletter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter {
+    align-items: center;
+  }
+
+  .emailfill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .emailfill form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .emailfill input, .subscribe-btn {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .emailfill input {
+    margin-bottom: 10px;
+  }
+}
+
+/* iPad Mini (768px x 1024px) */
+@media (max-width: 768px) {
+  .footer-container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kairos-bnr, .newsletter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter {
+    align-items: center;
+  }
+
+  .emailfill {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .emailfill form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .emailfill input, .subscribe-btn {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .emailfill input {
+    margin-bottom: 10px;
+  }
+}

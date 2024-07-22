@@ -1,4 +1,146 @@
+/* ProductList.css */
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-size: cover;
+    height: 100vh;
+}
+
 .product h2 {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+#brand_color {
+    color: rgb(250, 215, 0);
+}
+
+.product-carousel {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 5px;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+}
+
+.pic1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.price {
+    background-color: rgb(250, 215, 0);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* Media Queries */
+
+/* iPhone SE (375px x 667px) */
+@media (max-width: 375px) {
+    .product {
+        padding: 20px;
+        height: auto;
+    }
+
+    .product h2 {
+        font-size: 1.2em;
+    }
+
+    .card1 {
+        padding: 15px;
+    }
+
+    .image-container {
+        height: 200px;
+    }
+
+    .pic1 {
+        border-radius: 5px;
+    }
+
+    .price {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    button {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+}
+
+/* iPhone 12 Pro (390px x 844px) */
+@media (max-width: 390px) {
+    .product {
+        padding: 20px;
+        height: auto;
+    }
+
+    .product h2 {
+        font-size: 1.3em;
+    }
+
+    .card1 {
+        padding: 15px;
+    }
+
+    .image-container {
+        height: 220px;
+    }
+
+    .pic1 {
+        border-radius: 5px;
+    }
+
+    .price {
+        font-size: 0.95em;
+        padding: 5px;
+    }
+
+    button {
+        font-size: 0.85em;
+        padding: 5px;
+    }
+}
+
+/* iPhone XR (414px x 896px) */
+@media (max-width: 414px) {
+    .product {
+        padding: 5px 
+    }
+}
+
+
+
+/* .product h2 {
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -35,10 +177,10 @@
 
 .image-container {
     position: relative;
-    width: 100%;
-    height: 300px; /* Adjust height as needed */
-}
-.pic1 {
+    width: 100%; */
+ /* Adjust    height: 300px; height as needed 
+}*/
+/* .pic1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -54,7 +196,7 @@
     text-align: center;
     font-weight: bold;
     margin-top: 2px;
-}
+} */
 
 
 /*.pic1{

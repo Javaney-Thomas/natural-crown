@@ -1,11 +1,202 @@
+/* Whysection.css */
+
 .backlayr {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.backlayr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../materials/greenleaf2.png'); /* Adjust the path as needed */
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.sections {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the background pseudo-element */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    gap: 5px;
+}
+
+.large-item {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.small-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5px;
+    flex: 0.7;
+}
+
+.small-item {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.greetingcard {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.crown-fontclr {
+    color: #FAD700;
+    font-family: cursive;
+    border: 2px, solid black;
+    background-color: black
+    
+}
+
+.crown-fontclr2 {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Media Queries */
+
+/* iPhone SE (375px x 667px) */
+@media (max-width: 375px) {
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container, .greetingcard {
+        width: 100%;
+    }
+
+    .small-container {
+        flex-direction: column;
+    }
+
+    .large-item, .small-item {
+        width: 100%;
+    }
+}
+
+/* iPhone 12 Pro (390px x 844px) */
+@media (max-width: 390px) {
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container, .greetingcard {
+        width: 100%;
+    }
+
+    .small-container {
+        flex-direction: column;
+    }
+
+    .large-item, .small-item {
+        width: 100%;
+    }
+}
+
+/* iPhone XR (414px x 896px) */
+@media (max-width: 414px) {
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container, .greetingcard {
+        width: 100%;
+    }
+
+    .small-container {
+        flex-direction: column;
+    }
+
+    .large-item, .small-item {
+        width: 100%;
+    }
+}
+
+/* iPhone 14 Pro Max (430px x 932px) */
+@media (max-width: 430px) {
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container, .greetingcard {
+        width: 100%;
+    }
+
+    .small-container {
+        flex-direction: column;
+    }
+
+    .large-item, .small-item {
+        width: 100%;
+    }
+}
+
+/* iPad Mini (768px x 1024px) */
+@media (max-width: 768px) {
+    .sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-container, .greetingcard {
+        width: 100%;
+    }
+
+    .small-container {
+        flex-direction: column;
+    }
+
+    .large-item, .small-item {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+/* .backlayr {
     display: flex;
     width: 100%;
     filter: brightness(90%);
 }
 /*position: relative;*/
 
-.sections {
+/* .sections {
     display: flex;
     flex-direction: row ;
     padding: 10%;
@@ -56,7 +247,7 @@
 .crown-fontclr2{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-}
+} */
 /* .foreground-imgs {
     display: flex;
     flex-direction: column;
@@ -144,4 +335,4 @@
 }
 
  */
-
+ 

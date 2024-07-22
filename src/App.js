@@ -8,6 +8,7 @@ import ProductList from "./components/Products/ProductList";
 import Whysection from "./components/Head/Whysection";
 import Footer from './components/Foot/Footer';
 import Footer2 from './components/Foot/Footer2';
+import Footer3 from './components/Foot/Footer3';
 import Checkout from "./components/Checkingout/Checkout";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -51,6 +52,7 @@ function App() {
               <Whysection />
               <Footer />
               <Footer2 /> 
+              <Footer3 />
             </>
           } />
           <Route path="/checkout" element={<Checkout />} />
