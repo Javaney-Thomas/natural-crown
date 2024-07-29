@@ -8,6 +8,7 @@ import link45 from '../materials/link45deg.svg';
 import linkedin from '../materials/linkedin.svg';
 import geoalt from '../materials/geoalt.svg';
 
+
 const Header = () => {
   return (
     <div className="header">

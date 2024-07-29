@@ -37,6 +37,15 @@
     margin: 5px;
 }
 
+.card1 button:hover {
+    background-color: burlywood;
+
+}
+.card1 button:active {
+    background-color: darkgoldenrod;
+    transform: scale(0.95);
+}
+
 .image-container {
     position: relative;
     width: 100%;
