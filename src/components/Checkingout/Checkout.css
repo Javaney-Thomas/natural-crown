@@ -5,9 +5,11 @@
     height: max-content;
 }
 
-.checkout_AD {
+.checkout_ad {
     display: flex;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .checkout_title {
