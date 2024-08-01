@@ -1,6 +1,5 @@
 import React from 'react';
 import './CheckProduct.css'
-import Subtotal from "./Subtotal";
 import { useStateValue } from "../../StateProvider";
 
 

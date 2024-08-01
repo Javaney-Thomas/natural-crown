@@ -10,6 +10,15 @@
   align-items: center;
 }
 
+.footer-container2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  border-top: 1px dotted white;
+  position: absolute;
+  margin-top: 210px; /* Adjust the margin as needed */
+}
+
 .kairos-bnr {
   padding: 20px;
 }

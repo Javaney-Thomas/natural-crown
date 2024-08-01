@@ -18,7 +18,6 @@
 }
 
 .checkProduct_image {
-    object-fit: cover;
     width: 180px;
     height: 180px;
 }
