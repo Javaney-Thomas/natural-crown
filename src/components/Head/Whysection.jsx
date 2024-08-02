@@ -5,10 +5,14 @@ import prd7 from '../materials/prd7.png';
 import prd8 from '../materials/prd8.png';
 import glightback from '../materials/glightback.png';
 import './Whysection.css';
+import { Link as ScrollLink } from 'react-scroll';
+
+
+
 
 const Whysection = () => {
   return (
-    <div className='backlayr'
+    <div id="why-section" className='backlayr'
       style={{
       backgroundImage: `url(${glightback})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '100vh'}}>
       

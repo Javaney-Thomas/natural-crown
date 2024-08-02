@@ -8,7 +8,7 @@ import telephonefill from '../materials/telephonefill.svg';
 
 const Footer3 = () => {
   return (
-    <div className="footer-container3">
+    <div id="contact-us" className="footer-container3">
       <div className="container1">
         <h2>Contact Us</h2>
         <div className="connects">
@@ -36,7 +36,7 @@ const Footer3 = () => {
         </div>
       </div>
       <div className="container3">
-        <h2>CONNECT WITH US</h2>
+        <h2>Connect With Us</h2>
         <div className="endicons">
           <img src={instagram} alt="instagram" className="ftr-lefticon" />
           <img src={link45} alt="link45" className="ftr-lefticon" />

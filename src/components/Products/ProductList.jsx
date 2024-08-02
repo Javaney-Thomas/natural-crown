@@ -2,13 +2,19 @@ import React from 'react';
 import './ProductList.css';
 import greenleaf from '../materials/greenleaf.png';
 import summerrain2 from '../materials/summerrain2.jpeg';
+import summerrain from '../materials/summerrain.png'
 import unleashed2 from '../materials/unleashed2.jpeg';
+import goldenunleash from'../materials/goldenunleash.png';
 import rosepetal3 from '../materials/rosepetal3.jpeg';
+import rosepetal from '../materials/rosepetal.png'
 import lavender2 from '../materials/lavender2.jpeg';
+import lavender from '../materials/lavender.png';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import sheabuttermelon2 from "../materials/sheabuttermellon2.jpeg";
+import sheaberrymelon from "../materials/sheaberrymelon.png";
 import { useStateValue } from '../../StateProvider';
+
 
 const ProductList = () => {
   const [{ cart }, dispatch] = useStateValue();
@@ -33,19 +39,20 @@ const ProductList = () => {
     }
   };
 
-  const addToCart = (id, title, price) => {
+  const addToCart = (id, title, image, price) => {
     dispatch({
       type: 'ADD_TO_CART',
       item: {
         id: id,
         title: title,
+        image: image,
         price: price,
       },
     });
   };
 
   return (
-    <div className='product' style={{ backgroundImage: `url(${greenleaf})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '100vh' }}>
+    <div id='product-list' className='product' style={{ backgroundImage: `url(${greenleaf})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', height: '100vh' }}>
       <h2>SHOP OUR LATEST <span id='brand_color'>PRODUCTS</span></h2>
 
       <div className="product-carousel">
@@ -53,6 +60,7 @@ const ProductList = () => {
           <div className='card1'>
             <div className="image-container">
               <img className='pic1' src={summerrain2} alt="summerrain" />
+              <img className='pic2' src={summerrain} alt="summerrainStandIn" />
             </div>
             <h2 style={{ color: 'black' }}>Summer Rain</h2>
             <p className="price">$24.99</p>
@@ -63,16 +71,20 @@ const ProductList = () => {
           <div className='card1'>
             <div className="image-container">
               <img className='pic1' src={sheabuttermelon2} alt="sheabutter" />
+              <img className='pic2' src={sheaberrymelon} alt="sheaberryStandIn" />
             </div>
             <h2 style={{ color: 'black' }}>Shea Berry Melon</h2>
             <p className="price">$24.99</p>
             <button onClick={() => addToCart(2, 'Shea Berry Melon', 24.99)}>Add To Cart</button>
-            <p style={{ color: 'black' }}>Indulge your senses in a burst of juicy sweetness with our Shea Berry Melon Shea Butter Cream. Enriched with the goodness of shea butter and infused with the refreshing essence of ripe berries and succulent melon, this delightful scent will leave your skin feeling nourished and invigorated all day long.</p>
+            <p style={{ color: 'black' }}>Indulge your senses in a burst of juicy sweetness 
+            with our Shea Berry Melon Shea Butter Cream. Enriched with the goodness of shea
+             butter and infused with the refreshing essence of ripe berries and succulent melon, this delightful scent will leave your skin feeling nourished and invigorated all day long.</p>
           </div>
 
           <div className='card1'>
             <div className="image-container">
               <img className='pic1' src={unleashed2} alt="unleashed" />
+              <img className='pic2' src={goldenunleash} alt="goldenunleashStandIn" />
             </div>
             <h2 style={{ color: 'black' }}>Unleashed</h2>
             <p className="price">$24.99</p>
@@ -83,6 +95,7 @@ const ProductList = () => {
           <div className='card1'>
             <div className="image-container">
               <img className='pic1' src={rosepetal3} alt="rosepetal" />
+              <img className='pic2' src={rosepetal} alt="rosepetalStandIn" />
             </div>
             <h2 style={{ color: 'black' }}>Rose Petal</h2>
             <p className="price">$24.99</p>
@@ -93,6 +106,7 @@ const ProductList = () => {
           <div className='card1'>
             <div className="image-container">
               <img className='pic1' src={lavender2} alt="lavender" />
+              <img className='pic2' src={lavender} alt="lavendarStandIn" />
             </div>
             <h2 style={{ color: 'black' }}>Lavender Bliss</h2>
             <p className="price">$24.99</p>

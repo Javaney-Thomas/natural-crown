@@ -153,6 +153,31 @@
   }
 }
 
+.offcanvas-link {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.search-results {
+  margin-top: 20px;
+  color: white;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Ensure image styling if images are included in the future */
+.search-result-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+
 /* iPhone XR (414px x 896px) */
 @media (max-width: 414px) {
   .header2 {
