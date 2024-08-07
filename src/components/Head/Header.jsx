@@ -41,8 +41,8 @@ const Header = () => {
         <a href="https://www.instagram.com/crownednaturally?igsh=c3pyNDZnZmdmZjcw" target="_blank" rel="noopener noreferrer">
           <img src={instagram} alt="ig-icon" className="header-iconset" />
         </a>
-        <img src={link45} alt="link-icon" className="header-iconset" />
-        <img src={linkedin} alt="linkedin-icon" className="header-iconset" />
+        {/* <img src={link45} alt="link-icon" className="header-iconset" />
+        <img src={linkedin} alt="linkedin-icon" className="header-iconset" /> */}
       </div>
       <MapModal show={showMap} handleClose={handleClose} />
     </div>

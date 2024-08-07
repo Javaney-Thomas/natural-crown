@@ -64,7 +64,7 @@ const ProductList = () => {
             </div>
             <h2 style={{ color: 'black' }}>Summer Rain</h2>
             <p className="price">$24.99</p>
-            <button onClick={() => addToCart(1, 'Summer Rain', 24.99)}>Add To Cart</button>
+            <button onClick={() => addToCart(1, 'Summer Rain', summerrain2, 24.99)}>Add To Cart</button>
             <p style={{ color: 'black' }}>Experience the refreshing essence of a summer rain shower with our Summer Rain Shea Butter Cream. Let the calming aroma of rain-kissed petals and fresh greens transport you to a serene oasis, while our nourishing shea butter formula hydrates and revitalizes your skin, leaving it soft, smooth, and beautifully scented.</p>
           </div>
 
@@ -75,7 +75,7 @@ const ProductList = () => {
             </div>
             <h2 style={{ color: 'black' }}>Shea Berry Melon</h2>
             <p className="price">$24.99</p>
-            <button onClick={() => addToCart(2, 'Shea Berry Melon', 24.99)}>Add To Cart</button>
+            <button onClick={() => addToCart(2, 'Shea Berry Melon', sheabuttermelon2, 24.99)}>Add To Cart</button>
             <p style={{ color: 'black' }}>Indulge your senses in a burst of juicy sweetness 
             with our Shea Berry Melon Shea Butter Cream. Enriched with the goodness of shea
              butter and infused with the refreshing essence of ripe berries and succulent melon, this delightful scent will leave your skin feeling nourished and invigorated all day long.</p>
@@ -88,7 +88,7 @@ const ProductList = () => {
             </div>
             <h2 style={{ color: 'black' }}>Unleashed</h2>
             <p className="price">$24.99</p>
-            <button onClick={() => addToCart(3, 'Unleashed', 24.99)}>Add To Cart</button>
+            <button onClick={() => addToCart(3, 'Unleashed', unleashed2, 24.99)}>Add To Cart</button>
             <p style={{ color: 'black' }}>Unleash your inner confidence with our Unleashed Shea Butter Cream. This empowering scent combines the richness of shea butter with a hint of exotic spices and musk, creating a bold and captivating fragrance that commands attention. Elevate your skincare routine and embrace your natural beauty with every application.</p>
           </div>
 
@@ -99,7 +99,7 @@ const ProductList = () => {
             </div>
             <h2 style={{ color: 'black' }}>Rose Petal</h2>
             <p className="price">$24.99</p>
-            <button onClick={() => addToCart(4, 'Rose Petal', 24.99)}>Add To Cart</button>
+            <button onClick={() => addToCart(4, 'Rose Petal', rosepetal3, 24.99)}>Add To Cart</button>
             <p style={{ color: 'black' }}>Immerse yourself in the timeless elegance of our Rose Petal Shea Butter Cream. Infused with the delicate fragrance of freshly picked roses, this luxurious cream melts into your skin, delivering deep hydration and a subtle floral aroma that lingers throughout the day. Pamper yourself with a touch of romance and indulgence.</p>
           </div>
 
@@ -110,7 +110,7 @@ const ProductList = () => {
             </div>
             <h2 style={{ color: 'black' }}>Lavender Bliss</h2>
             <p className="price">$24.99</p>
-            <button onClick={() => addToCart(5, 'Lavender Bliss', 24.99)}>Add To Cart</button>
+            <button onClick={() => addToCart(5, 'Lavender Bliss', lavender2, 24.99)}>Add To Cart</button>
             <p style={{ color: 'black' }}>Immerse yourself in the timeless elegance of our Rose Petal Shea Butter Cream. Infused with the delicate fragrance of freshly picked roses, this luxurious cream melts into your skin, delivering deep hydration and a subtle floral aroma that lingers throughout the day. Pamper yourself with a touch of romance and indulgence.</p>
           </div>
         </Carousel>

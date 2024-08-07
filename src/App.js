@@ -7,6 +7,7 @@ import CarouselImages from './components/Carousel/CarouselImages';
 import ProductList from "./components/Products/ProductList";
 import Whysection from "./components/Head/Whysection";
 import Footer from './components/Foot/Footer';
+import Payment from './Paysection/Payment';
 import Footer2 from './components/Foot/Footer2';
 import Footer3 from './components/Foot/Footer3';
 import Checkout from "./components/Checkingout/Checkout";
@@ -57,6 +58,7 @@ function App() {
           } />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/ProductList" element={<ProductList/>} />
+          <Route path="/payment" element={<Payment/>} />
         </Routes>
       </Router>
   );
