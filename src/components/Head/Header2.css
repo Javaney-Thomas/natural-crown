@@ -1,10 +1,11 @@
 /* Header2.css */
 
+
 .header2 {
   display: flex;
   align-items: flex-start;
   padding: 20px;
-  background-color: #fff;
+  background: linear-gradient(rgb(255, 255, 255), rgba(0, 0, 0, 0.443));
   height: 180px;
 }
 

@@ -22,3 +22,6 @@
     height: 180px;
 }
 
+#remove_btn {
+    border-radius: 10px;
+}

@@ -11,6 +11,14 @@
     border-bottom: 1px solid #FAD700;
 }
 
+.payment_container > h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgb(234, 234, 237);
+    border-bottom: 1px solid pink;
+}
+
 .payment_container > h1 a {
     text-decoration: none;
 }
@@ -19,13 +27,13 @@
     display: flex;
     padding: 20px;
     margin: 0 20px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid red;
 }
 
 .payment_title {
     flex: 0.2;
 }
 
-.payment_address {
+.payment_address, .payment_items, .payment_details{
     flex: 0.8;
 }
