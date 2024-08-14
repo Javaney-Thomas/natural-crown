@@ -39,31 +39,60 @@ const Payment = () => {
 
     console.log('The Secret is >>>', clientSecret);
 
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     setProcessing(true);
+
+    //     if (!clientSecret) {
+    //         setError("Failed to initiate payment. Please try again.");
+    //         setProcessing(false);
+    //         return;
+    //     }
+
+    //     const payload = await stripe.confirmCardPayment(clientSecret, {
+    //         payment_method: {
+    //             card: elements.getElement(CardElement),
+    //         },
+    //     }).then(({ paymentIntent }) => {
+    //         setSucceeded(true);
+    //         setError(null);
+    //         setProcessing(false);
+
+    //         navigate('/orders');
+    //     }).catch((error) => {
+    //         setError(`Payment failed: ${error.message}`);
+    //         setProcessing(false);
+    //     });
+    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
         setProcessing(true);
-
+    
         if (!clientSecret) {
             setError("Failed to initiate payment. Please try again.");
             setProcessing(false);
             return;
         }
-
-        const payload = await stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: elements.getElement(CardElement),
-            },
-        }).then(({ paymentIntent }) => {
+    
+        try {
+            const payload = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: elements.getElement(CardElement),
+                },
+            });
+    
             setSucceeded(true);
             setError(null);
             setProcessing(false);
-
+    
             navigate('/orders');
-        }).catch((error) => {
+        } catch (error) {
+            console.error("Payment failed:", error);
             setError(`Payment failed: ${error.message}`);
             setProcessing(false);
-        });
+        }
     };
+    
 
     const handleChange = (e) => {
         setDisabled(e.empty);
