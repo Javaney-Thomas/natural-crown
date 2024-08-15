@@ -1,0 +1,50 @@
+/* .order {
+    padding: 40px;
+    margin: 20px 0;
+    border: 1px solid lightgrey;
+    background-color: aqua;
+    position: relative;
+}
+
+.order_id{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.order_total {
+    font-weight: 500;
+    text-align: right;
+} */
+
+.order {
+    padding: 40px;
+    margin: 20px 0;
+    border: 1px solid lightgrey;
+    background-color: aqua;
+    position: relative;
+}
+
+.order_id {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.order_total {
+    font-weight: 500;
+    text-align: right;
+}
+
+.orders {
+    padding: 20px 80px;
+}
+
+.orders > h1 {
+    margin: 30px 0;
+}
+
+.orders_order {
+    display: flex;
+    flex-direction: column;
+}

@@ -7,6 +7,8 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { getCartTotal } from '../reducer';
 import CurrencyFormat from 'react-currency-format';
 import axios from '../axios';
+import { db } from '../firebase';
+import { v4 as uuidv4 } from 'uuid';
 
 const Payment = () => {
     const [{ cart, user }, dispatch] = useStateValue();
@@ -39,31 +41,6 @@ const Payment = () => {
 
     console.log('The Secret is >>>', clientSecret);
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setProcessing(true);
-
-    //     if (!clientSecret) {
-    //         setError("Failed to initiate payment. Please try again.");
-    //         setProcessing(false);
-    //         return;
-    //     }
-
-    //     const payload = await stripe.confirmCardPayment(clientSecret, {
-    //         payment_method: {
-    //             card: elements.getElement(CardElement),
-    //         },
-    //     }).then(({ paymentIntent }) => {
-    //         setSucceeded(true);
-    //         setError(null);
-    //         setProcessing(false);
-
-    //         navigate('/orders');
-    //     }).catch((error) => {
-    //         setError(`Payment failed: ${error.message}`);
-    //         setProcessing(false);
-    //     });
-    // };
     const handleSubmit = async (e) => {
         e.preventDefault();
         setProcessing(true);
@@ -75,15 +52,30 @@ const Payment = () => {
         }
     
         try {
-            const payload = await stripe.confirmCardPayment(clientSecret, {
+            const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
                 payment_method: {
                     card: elements.getElement(CardElement),
                 },
             });
+
+            // Save the order in Firestore
+            db.collection('users')
+                .doc(user?.uid) // Assuming `uid` is the correct user ID reference
+                .collection('orders')
+                .doc(paymentIntent.id)
+                .set({
+                    cart: cart,
+                    amount: paymentIntent.amount,
+                    created: paymentIntent.created,
+                });
     
             setSucceeded(true);
             setError(null);
             setProcessing(false);
+            
+            dispatch({
+                type: 'EMPTY_CART'
+            });
     
             navigate('/orders');
         } catch (error) {
@@ -92,7 +84,6 @@ const Payment = () => {
             setProcessing(false);
         }
     };
-    
 
     const handleChange = (e) => {
         setDisabled(e.empty);
@@ -124,7 +115,7 @@ const Payment = () => {
                     <div className="payment_items">
                         {cart.map(item => (
                             <CheckProduct
-                                key={item.id}
+                                key={uuidv4()} 
                                 id={item.id}
                                 title={item.title}
                                 image={item.image}
@@ -168,6 +159,198 @@ const Payment = () => {
 }
 
 export default Payment;
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from 'react';
+// import './Payment.css';
+// import CheckProduct from '../components/Checkingout/CheckProduct';
+// import { useStateValue } from "../StateProvider";
+// import { Link, useNavigate } from "react-router-dom";
+// import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+// import { getCartTotal } from '../reducer';
+// import CurrencyFormat from 'react-currency-format';
+// import axios from '../axios';
+// import { db } from '../firebase';
+
+// const Payment = () => {
+//     const [{ cart, user }, dispatch] = useStateValue();
+//     const navigate = useNavigate();
+
+//     const stripe = useStripe();
+//     const elements = useElements();
+
+//     const [succeeded, setSucceeded] = useState(false);
+//     const [processing, setProcessing] = useState("");
+//     const [error, setError] = useState(null);
+//     const [disabled, setDisabled] = useState(true);
+//     const [clientSecret, setClientSecret] = useState(null);
+
+//     useEffect(() => {
+//         const getClientSecret = async () => {
+//             try {
+//                 const response = await axios.post(`/payments/create?total=${getCartTotal(cart) * 100}`);
+//                 setClientSecret(response.data.clientSecret);
+//             } catch (error) {
+//                 console.error("Error getting client secret:", error);
+//                 setError("Failed to retrieve payment secret. Please try again later.");
+//             }
+//         };
+    
+//         if (cart?.length > 0) {
+//             getClientSecret();
+//         }
+//     }, [cart]);
+
+//     console.log('The Secret is >>>', clientSecret);
+
+//     // const handleSubmit = async (e) => {
+//     //     e.preventDefault();
+//     //     setProcessing(true);
+
+//     //     if (!clientSecret) {
+//     //         setError("Failed to initiate payment. Please try again.");
+//     //         setProcessing(false);
+//     //         return;
+//     //     }
+
+//     //     const payload = await stripe.confirmCardPayment(clientSecret, {
+//     //         payment_method: {
+//     //             card: elements.getElement(CardElement),
+//     //         },
+//     //     }).then(({ paymentIntent }) => {
+//     //         setSucceeded(true);
+//     //         setError(null);
+//     //         setProcessing(false);
+
+//     //         navigate('/orders');
+//     //     }).catch((error) => {
+//     //         setError(`Payment failed: ${error.message}`);
+//     //         setProcessing(false);
+//     //     });
+//     // };
+//     const handleSubmit = async (e) => {
+//         e.preventDefault();
+//         setProcessing(true);
+    
+//         if (!clientSecret) {
+//             setError("Failed to initiate payment. Please try again.");
+//             setProcessing(false);
+//             return;
+//         }
+    
+//         try {
+//             const payload = await stripe.confirmCardPayment(clientSecret, {
+//                 payment_method: {
+//                     card: elements.getElement(CardElement),
+//                 },
+//             });
+
+//             db.collection('users')
+//             .doc(user?.id)
+//             .collection('oders')
+//             .doc(paymentIntent.id)
+//             .set({
+//                 cart: cart,
+//                 amount: paymentIntent.amount,
+//                 created: paymentIntent.created
+//             })
+    
+//             setSucceeded(true);
+//             setError(null);
+//             setProcessing(false);
+            
+//             dispatch({
+//                 type: 'EMPTY_CART'
+//             })
+    
+//             navigate('/orders');
+//         } catch (error) {
+//             console.error("Payment failed:", error);
+//             setError(`Payment failed: ${error.message}`);
+//             setProcessing(false);
+//         }
+//     };
+    
+
+//     const handleChange = (e) => {
+//         setDisabled(e.empty);
+//         setError(e.error ? e.error.message : "");
+//     };
+
+//     return (
+//         <div className='payment'>
+//             <div className="payment_container">
+//                 <h1>
+//                     Checkout (
+//                     <Link to="/checkout">{cart?.length} items</Link>)
+//                 </h1>
+
+//                 <div className="payment_section">
+//                     <div className="payment_title">
+//                         <h3>Delivery Address</h3>
+//                     </div>
+//                     <div className="payment_address">
+//                         <p>123 Lane</p>
+//                         <p>NYC</p>
+//                     </div>
+//                 </div>
+
+//                 <div className="payment_section">
+//                     <div className="payment_title">
+//                         <h3>Review Items</h3>
+//                     </div>
+//                     <div className="payment_items">
+//                         {cart.map(item => (
+//                             <CheckProduct
+//                                 key={item.id}
+//                                 id={item.id}
+//                                 title={item.title}
+//                                 image={item.image}
+//                                 price={item.price}
+//                             />
+//                         ))}
+//                     </div>
+//                 </div>
+
+//                 <div className="payment_section">
+//                     <div className="payment_title">
+//                         <h3>Payment Method</h3>
+//                     </div>
+//                     <div className="payment_details">
+//                         <form onSubmit={handleSubmit}>
+//                             <CardElement onChange={handleChange} />
+
+//                             <div className="payment_priceContainer">
+//                                 <CurrencyFormat
+//                                     renderText={(value) => (
+//                                         <h3>Order Total: {value}</h3>
+//                                     )}
+//                                     decimalScale={2}
+//                                     value={getCartTotal(cart)}
+//                                     displayType={"text"}
+//                                     thousandSeparator={true}
+//                                     prefix={"$"}
+//                                 />
+//                                 <button disabled={processing || disabled || succeeded}>
+//                                     <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
+//                                 </button>
+//                             </div>
+
+//                             {error && <div>{error}</div>}
+//                         </form>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default Payment;
 
 
 

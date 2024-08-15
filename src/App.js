@@ -85,6 +85,7 @@ import Payment from './Paysection/Payment';
 import Footer2 from './components/Foot/Footer2';
 import Footer3 from './components/Foot/Footer3';
 import Checkout from "./components/Checkingout/Checkout";
+import Orders from "./Paysection/Orders";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
@@ -129,6 +130,7 @@ function App() {
             </>
           } />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/orders" element={<Orders />} />
           <Route path="/ProductList" element={<ProductList/>} />
           <Route path="/payment" element={
             <Elements stripe={stripePromise}>
