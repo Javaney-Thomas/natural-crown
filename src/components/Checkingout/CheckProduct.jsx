@@ -2,7 +2,7 @@ import React from 'react';
 import './CheckProduct.css';
 import { useStateValue } from "../../StateProvider";
 
-const CheckProduct = ({ id, title, image, price, quantity }) => {
+const CheckProduct = ({ id, title, image, price, quantity, showQuantity = true, showRemoveButton = true  }) => {
   const [{ cart }, dispatch] = useStateValue();
 
   const removeFromCart = () => {
@@ -27,8 +27,8 @@ const CheckProduct = ({ id, title, image, price, quantity }) => {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        {/* <p className="checkProduct_quantity">Quantity: {quantityValue}</p> Updated class name */}
-        {/* <button id='remove_btn' onClick={removeFromCart}>Remove From Cart</button> */}
+        {showQuantity && <p className="checkProduct_quantity">Quantity: {quantity}</p>}
+        {showRemoveButton && <button id='remove_btn'>Remove From Cart</button>}
       </div>
     </div>
   );
