@@ -1,4 +1,51 @@
+/* CheckProduct.css */
+
 .checkProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 200px; /* Adjust based on your design */
+    margin-right: 10px; /* Space between items */
+    scroll-snap-align: start;
+}
+
+.checkProduct_image {
+    width: 100%;
+    height: auto;
+}
+
+.checkProduct_info {
+    text-align: center;
+}
+
+.checkProduct_title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checkProduct_price {
+    font-size: 14px;
+    color: #333;
+}
+
+.checkoutProduct__quantity {
+    font-size: 14px;
+    color: #666;
+}
+
+#remove_btn {
+    margin-top: 10px;
+    background-color: #FAD700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+
+
+/* .checkProduct {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -24,4 +71,4 @@
 
 #remove_btn {
     border-radius: 10px;
-}
+} */

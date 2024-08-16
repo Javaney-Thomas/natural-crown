@@ -28,7 +28,7 @@ const Subtotal = () => {
         thousandSeparator={true}
         prefix={"$"}
       />
-      <button onClick={e => navigate('/payment')}>Proceed to Checkout</button>
+      <button className="checkout-btn" onClick={e => navigate('/payment')}>Proceed to Checkout</button>
     </div>
   );
 }

@@ -6,6 +6,9 @@ import telephonefill from '../materials/telephonefill.svg';
 import instagram from '../materials/instagram.svg';
 import MapModal from '../Head/Mapmodal';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import fb from '../materials/fb.svg';
+
+
 
 const Header = () => {
   const [showMap, setShowMap] = useState(false);
@@ -42,12 +45,20 @@ const Header = () => {
         </a>
 
         <a href="https://www.facebook.com/crownednaturally" target="_blank" rel="noopener noreferrer">
-          <FacebookRoundedIcon className="fb_iconset" />
+          <img src={fb} alt="fb_svg" className="header-iconset"
+          style={{
+            height: "35px",
+            width: "35px",
+            padding: "3px",
+            margin: "10px"}} />
         </a>
 
-        <a href="https://www.styleseat.com/m/v/MissQ2u" target="_blank" rel="noopener noreferrer">
-          <button className="style_btn">StyleSeat</button>
-        </a>
+        <div>
+        <button className="style_btn" onClick={() => window.open("https://www.styleseat.com/m/v/MissQ2u", "_blank")}>
+          StyleSeat
+        </button>
+        </div>
+        
         
       </div>
       <MapModal show={showMap} handleClose={handleClose} />

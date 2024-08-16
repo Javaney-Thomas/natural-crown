@@ -11,7 +11,7 @@
 }
 
 /* The new icons at the end pf the header bar */
-.fb_iconset {
+/* .fb_iconset {
   color: rgb(255, 255, 255);
   margin: 0 4px;
   transition: transform 0.3s ease;
@@ -19,20 +19,22 @@
 }
 .fb_iconset:hover {
   transform: scale(1.1);
-}
+} */
 
 .style_btn {
   display: flex;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: white;
   margin: 0 4px;
-  transition: transform 0.3s ease;
-  text-decoration: none; 
+  transition: transform 0.3s ease; /* Keep only one transition property */
+  text-decoration: none; /* Ensure text decoration is removed */
   padding: 7px 7px;
 }
+
 .style_btn:hover {
-  transform: scale (1.1);
+  transform: scale(1.1); /* Corrected syntax */
 }
+
 /* End of this section */
 
 

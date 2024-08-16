@@ -1,4 +1,122 @@
+/* Payment.css */
+
 .payment {
+    background-image: url('../components/materials/leavesbck3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.payment_container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(234, 234, 237, 0.9); /* Semi-transparent background */
+}
+
+.payment_section {
+    margin: 20px auto;
+    width: 80%; /* Center section with 80% width */
+}
+
+.payment_title {
+    margin-bottom: 20px;
+}
+
+.payment_items {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(0, 153, 96, 0.8);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+    justify-content: center; /* Center items horizontally */
+}
+
+.payment_item {
+    display: flex;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 100px; /* Adjust based on your item's size */
+    margin-right: 10px;
+}
+
+.payment_item img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.payment_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    width: 100%; /* Full width for centering */
+    padding: 50px;
+    background-color: rgba(30, 41, 37, 0.8);
+    color: white;
+}
+
+.payment_priceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+
+
+
+/* .payment_items {
+    display: flex;
+    padding: 10px;
+    background-color: rgba(0, 153, 96, 0.8);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px; /* Space between items */
+/* } */
+
+/* .payment_items::-webkit-scrollbar {
+    display: flex; Hide scrollbar
+} */
+/* 
+.payment_item {
+    display: flex;
+    flex: 0 0 auto;
+    scroll-snap-align: start;width: 100px; */
+     /* Adjust based on your item's size */
+    /* margin-right: 10px;
+} */
+
+/* .payment_item img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.payment_details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 200px;
+    padding: 50px;
+    margin-left: 290px;
+    background-color: rgba(30, 41, 37, 0.8);
+    color: white;
+}
+
+.payment_title {
+    justify-content: center;
+    align-items: center;
+    padding-left: 450px;
+    flex: 1;
+} */
+
+
+
+/* .payment {
     background-color: #FAD700;
 
 }
@@ -30,10 +148,8 @@
     border-bottom: 1px solid red;
 }
 
-.payment_title {
-    flex: 0.2;
-}
 
-.payment_address, .payment_items, .payment_details{
+
+.payment_address, .payment_items, 
     flex: 0.8;
-}
+} */ 
