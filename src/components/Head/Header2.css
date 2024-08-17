@@ -1,17 +1,14 @@
-/* Header2.css */
-
-
 .header2 {
   display: flex;
   align-items: flex-start;
   padding: 20px;
-  background: linear-gradient(rgb(255, 255, 255), rgba(0, 0, 0, 0.443));
+  background: linear-gradient(rgb(126, 156, 45), rgba(11, 87, 22, 0.892));
   height: 180px;
 }
 
 .header2-logo {
-  height: 200px; /* Increase size */
-  width: 200px;  /* Increase size */
+  height: 200px; 
+  width: 200px;  
   object-fit: cover;
   padding: 0;
   background: transparent;
@@ -29,6 +26,16 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
+.header2-carousel .carousel-control-prev,
+.header2-carousel .carousel-control-next {
+    display: none; /* Hide the arrows */
+}
+
+.header2-carousel .carousel-indicators {
+    display: none; /* Hide the indicators (dots) */
+}
+
 
 .header2-carousel {
   flex: 1;

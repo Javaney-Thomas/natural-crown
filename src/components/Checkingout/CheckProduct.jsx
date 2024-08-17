@@ -27,8 +27,8 @@ const CheckProduct = ({ id, title, image, price, quantity, showQuantity = true, 
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        {showQuantity && <p className="checkProduct_quantity">Quantity: {quantity}</p>}
-        {showRemoveButton && <button id='remove_btn'>Remove From Cart</button>}
+        <p className="checkProduct_quantity">Quantity: {quantity}</p>
+        <button id='remove_btn' onClick={removeFromCart}>Remove From Cart</button>
       </div>
     </div>
   );

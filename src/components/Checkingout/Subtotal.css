@@ -1,33 +1,59 @@
 .subtotal {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 300px;
     height: 140px;
+    font-weight: 900;
     padding: 30px;
     background-color: #FAD007;
     border: none;
     border-radius: 10px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3); /* Transparent background to see images behind */
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .subtotal_gift{
     display: flex;
     align-items: center;
+    padding-bottom: 7px;
 }
 
 .subtotal_gift > button {
-   
     border-radius: 2px;
     width: 100%;
     height: 30px;
     border: 1px solid;
-   
     color: black;
 }
 
 .checkout-btn {
+  border-radius: 10px;
+  border: solid 1px black; /* Ensure the border matches the background */
+  background: black;
+  color: white; /* Initial text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: 0.3s, color 0.3s;
+  
+
+}
+
+.checkout-btn:hover {
+  background: yellow; /* Change background color on hover */
+  color: black; /* Change text color on hover */
+  
+}
+
+
+/* .checkout-btn {
     border-radius: 10px;
-    border: none;
+    border: solid 1px;
+    background: black;
     background: 
      linear-gradient(#000 0 0) 
     0% calc(-3px - 100%) /var(--d, 0%) 200% no-repeat;
@@ -39,4 +65,4 @@
   background-position: 50% 0%;
   color: #fff;
   transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
-}
+} */

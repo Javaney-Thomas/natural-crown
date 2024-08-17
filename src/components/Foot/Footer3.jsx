@@ -77,7 +77,7 @@ const Footer3 = () => {
             padding: "3px",
             margin: "10px"}} />
         </a>
-          <button className="style_btn" onClick={() => window.open("https://www.styleseat.com/m/v/MissQ2u", "_blank")}>
+          <button className="style_bn" onClick={() => window.open("https://www.styleseat.com/m/v/MissQ2u", "_blank")}>
           StyleSeat
         </button>
 

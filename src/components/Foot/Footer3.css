@@ -46,6 +46,21 @@
   height: 30px;
 }
 
+.style_bn {
+  display: flex;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  margin: 0 4px;
+  transition: transform 0.3s ease;
+  text-decoration: none; 
+  padding: 7px 7px;
+}
+  
+.style_bttn:hover {
+    transform: scale(1.1); 
+}
+
 .wordlinks h4, .patent h5 {
   margin: 5px 0;
   color: white;

@@ -10,29 +10,19 @@
   color: white;
 }
 
-/* The new icons at the end pf the header bar */
-/* .fb_iconset {
-  color: rgb(255, 255, 255);
-  margin: 0 4px;
-  transition: transform 0.3s ease;
-  font-size: 44px;
-}
-.fb_iconset:hover {
-  transform: scale(1.1);
-} */
-
-.style_btn {
+.style_bttn {
   display: flex;
   border-radius: 20px;
   background-color: white;
+  color: black;
   margin: 0 4px;
-  transition: transform 0.3s ease; /* Keep only one transition property */
-  text-decoration: none; /* Ensure text decoration is removed */
+  transition: transform 0.3s ease;
+  text-decoration: none; 
   padding: 7px 7px;
 }
 
-.style_btn:hover {
-  transform: scale(1.1); /* Corrected syntax */
+.style_bttn:hover {
+  transform: scale(1.1); 
 }
 
 /* End of this section */

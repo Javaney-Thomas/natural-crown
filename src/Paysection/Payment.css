@@ -1,16 +1,17 @@
-/* Payment.css */
-
 .payment {
     background-image: url('../components/materials/leavesbck3.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    background:linear-gradient(rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3));
+    
 }
 
 .payment_container {
     text-align: center;
     padding: 20px;
-    background-color: rgba(234, 234, 237, 0.9); /* Semi-transparent background */
+    /* background-color: rgba(190, 190, 190, 0.9); Semi-transparent background */
+    border-radius: 10px; /* Add rounded corners to the container */
 }
 
 .payment_section {
@@ -20,12 +21,14 @@
 
 .payment_title {
     margin-bottom: 20px;
+    background: linear-gradient(rgb(126, 156, 45), rgba(11, 87, 22, 0.892));
+    border-radius: 10px;
 }
 
 .payment_items {
     display: flex;
     padding: 10px;
-    background-color: rgba(0, 153, 96, 0.8);
+    background-color: rgba(28, 39, 34, 0.8);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -41,6 +44,17 @@
     margin-right: 10px;
 }
 
+.buy-now {
+    border-radius: 10px;
+    background-color: green; /* Green background */
+    color: white;
+}
+
+.buy-now:hover {
+    background-color: yellow; /* Yellow on hover */
+    color: black; /* Change text color to black on hover */
+}
+
 .payment_item img {
     display: flex;
     width: 100%;
@@ -49,107 +63,44 @@
 
 .payment_details {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center;
-    width: 100%; /* Full width for centering */
-    padding: 50px;
+    flex-direction: column; /* Arrange fields vertically */
+    width: 100%; /* Full width for proper alignment */
+    padding: 20px;
     background-color: rgba(30, 41, 37, 0.8);
     color: white;
+    border-radius: 10px; /* Add rounded corners to the details section */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.payment_input {
+    display: flex; /* Use flexbox to align label and input */
+    align-items: center; /* Center label and input vertically */
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.payment_input label {
+    flex: 0 0 150px; /* Fixed width for labels */
+    margin-right: 10px; /* Space between label and input */
+    color: white; /* Ensure label text is white for visibility */
+    text-align: right; /* Align label text to the right */
+}
+
+.payment_input input {
+    flex: 1; /* Allow input to take remaining space */
+    padding: 5px;
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    background-color: #fff; 
+    color: #000; 
+}
+
+.card_element {
+    margin-top: 15px; /* Space above CardElement */
 }
 
 .payment_priceContainer {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center; 
 }
-
-
-
-
-/* .payment_items {
-    display: flex;
-    padding: 10px;
-    background-color: rgba(0, 153, 96, 0.8);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 10px; /* Space between items */
-/* } */
-
-/* .payment_items::-webkit-scrollbar {
-    display: flex; Hide scrollbar
-} */
-/* 
-.payment_item {
-    display: flex;
-    flex: 0 0 auto;
-    scroll-snap-align: start;width: 100px; */
-     /* Adjust based on your item's size */
-    /* margin-right: 10px;
-} */
-
-/* .payment_item img {
-    display: flex;
-    width: 100%;
-    height: auto;
-}
-
-.payment_details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 200px;
-    padding: 50px;
-    margin-left: 290px;
-    background-color: rgba(30, 41, 37, 0.8);
-    color: white;
-}
-
-.payment_title {
-    justify-content: center;
-    align-items: center;
-    padding-left: 450px;
-    flex: 1;
-} */
-
-
-
-/* .payment {
-    background-color: #FAD700;
-
-}
-
-.payment_container {
-    text-align: center;
-    padding: 10px;
-    font-weight: 400;
-    background-color: rgb(234, 234, 237);
-    border-bottom: 1px solid #FAD700;
-}
-
-.payment_container > h1 {
-    text-align: center;
-    padding: 10px;
-    font-weight: 400;
-    background-color: rgb(234, 234, 237);
-    border-bottom: 1px solid pink;
-}
-
-.payment_container > h1 a {
-    text-decoration: none;
-}
-
-.payment_section {
-    display: flex;
-    padding: 20px;
-    margin: 0 20px;
-    border-bottom: 1px solid red;
-}
-
-
-
-.payment_address, .payment_items, 
-    flex: 0.8;
-} */ 

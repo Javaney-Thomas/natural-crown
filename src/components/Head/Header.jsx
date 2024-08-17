@@ -5,7 +5,6 @@ import envelopealtfill from '../materials/envelopealtfill.svg';
 import telephonefill from '../materials/telephonefill.svg';
 import instagram from '../materials/instagram.svg';
 import MapModal from '../Head/Mapmodal';
-import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import fb from '../materials/fb.svg';
 
 
@@ -54,7 +53,7 @@ const Header = () => {
         </a>
 
         <div>
-        <button className="style_btn" onClick={() => window.open("https://www.styleseat.com/m/v/MissQ2u", "_blank")}>
+        <button className="style_bttn" onClick={() => window.open("https://www.styleseat.com/m/v/MissQ2u", "_blank")}>
           StyleSeat
         </button>
         </div>
