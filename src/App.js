@@ -91,8 +91,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
 const stripePromise = loadStripe(
-  "pk_test_51Nl6cTEHx6HMgKSKknwAcFkwRAbP2o2Omu51e9NBbkVAXwCIhb8EGSkwHFt63V8RBlmPwJq7OgQBieV2qN4RsSSa00ATE387f6"
-);
+  "pk_test_51MUaHtJj4XFwEzs7EIifVmYbFgPIVFiZwETRZprFEWJSjdkh4qcTVcp1BbP2ysreLl8kHVVMAAcPTGino8qvXfHx00l6T7jjJr"
+);//changed to Quinisha's Stripe Key
 
 function App() {
   const [toggleDarkMode, setToggleDarkMode] = useState(true);
