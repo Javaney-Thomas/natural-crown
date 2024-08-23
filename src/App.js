@@ -89,6 +89,7 @@ import Orders from "./Paysection/Orders";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import './styles.css';
 
 const stripePromise = loadStripe(
   "pk_test_51MUaHtJj4XFwEzs7EIifVmYbFgPIVFiZwETRZprFEWJSjdkh4qcTVcp1BbP2ysreLl8kHVVMAAcPTGino8qvXfHx00l6T7jjJr"

@@ -1,5 +1,12 @@
 .orders {
     padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed; /* Optional: This makes the background image stay fixed while scrolling */
+    padding: 20px; /* Add padding to ensure content doesn’t touch the edges */
+    min-height: 100vh;
 }
 
 .orders > h1 {

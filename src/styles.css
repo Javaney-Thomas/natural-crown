@@ -1,0 +1,25 @@
+/* styles.css */
+@media (min-width: 1600px) {
+    body {
+      font-size: 18px; /* Global font size for larger screens */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 667px) {
+    body {
+      font-size: 12px;
+    }
+  }
+  

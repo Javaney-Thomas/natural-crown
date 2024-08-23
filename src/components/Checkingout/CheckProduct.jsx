@@ -2,7 +2,7 @@ import React from 'react';
 import './CheckProduct.css';
 import { useStateValue } from "../../StateProvider";
 
-const CheckProduct = ({ id, title, image, price, quantity, showQuantity = true, showRemoveButton = true  }) => {
+const CheckProduct = ({ id, title, image, price, quantity, showQuantity = true}) => {
   const [{ cart }, dispatch] = useStateValue();
 
   const removeFromCart = () => {
@@ -27,7 +27,7 @@ const CheckProduct = ({ id, title, image, price, quantity, showQuantity = true, 
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <p className="checkProduct_quantity">Quantity: {quantity}</p>
+        {quantity && <p className="checkProduct_quantity">Quantity: {quantity}</p>}
         <button id='remove_btn' onClick={removeFromCart}>Remove From Cart</button>
       </div>
     </div>
