@@ -27,7 +27,8 @@ const Payment = () => {
     useEffect(() => {
         const getClientSecret = async () => {
             try {
-                const response = await axios.post(`/payments/create?total=${getCartTotal(cart) * 100}`);
+                const totalAmount = Math.round(getCartTotal(cart) * 100);
+                const response = await axios.post(`/payments/create?total=${totalAmount}`);
                 setClientSecret(response.data.clientSecret);
             } catch (error) {
                 console.error("Error getting client secret:", error);
@@ -57,11 +58,7 @@ const Payment = () => {
                 },
             });
 
-            await db.collection('users')
-                .doc(user?.uid)
-                .collection('orders')
-                .doc(paymentIntent.id)
-                .set({
+            await db.collection('orders').add({
                     cart: cart,
                     amount: paymentIntent.amount,
                     created: paymentIntent.created,

@@ -1,45 +1,101 @@
 import React, { useState, useEffect } from 'react';
-import './Orders.css';
 import { db } from '../firebase';
+import './Orders.css';
 import { useStateValue } from '../StateProvider';
 import Order from './Order';
 
 const Orders = () => {
-    const [{ user }] = useStateValue();
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        if (user) {
-            db
-            .collection('users')
-            .doc(user?.uid)
-            .collection('orders') // Fixed typo here
-            .orderBy('created', 'desc')
-            .onSnapshot(snapshot => (
-                setOrders(snapshot.docs.map(doc => ({
+        // Fetch orders from Firestore
+        const fetchOrders = async () => {
+            try {
+                const ordersSnapshot = await db.collection('orders').orderBy('created', 'desc').get();
+                const ordersList = ordersSnapshot.docs.map(doc => ({
                     id: doc.id,
                     data: doc.data(),
-                })))
-            ));
-        } else {
-            setOrders([]);
-        }
-    }, [user]);
+                }));
+                setOrders(ordersList);
+            } catch (error) {
+                console.error("Error fetching orders:", error);
+            }
+        };
+
+        fetchOrders();
+    }, []);
 
     return (
         <div className="orders">
-            <h1>Your Orders</h1>
-            <div className="orders_order">
-                {orders.length === 0 ? (
-                    <p>No orders found.</p>
-                ) : (
-                    orders.map(order => (
-                        <Order key={order.id} order={order} /> // Added key prop
-                    ))
-                )}
+            <h2>Your Orders</h2>
+            <div className="orders_list">
+                {orders.map(order => (
+                    <div key={order.id} className="order">
+                        <h3>Name: {order.data.name}</h3>
+                        <p>Address: {order.data.address}</p>
+                        <p>Order Total: ${(order.data.amount / 100).toFixed(2)}</p>
+                        <div className="order_items">
+                            {order.data.cart.map((item, index) => (
+                                <div key={index} className="order_item">
+                                    <p>{item.title}</p>
+                                    <p>Price: ${item.price}</p>
+                                    <p>Quantity: {item.quantity}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <p>Order placed on: {new Date(order.data.created * 1000).toLocaleString()}</p>
+                    </div>
+                ))}
             </div>
         </div>
     );
 }
 
 export default Orders;
+
+
+// import React, { useState, useEffect } from 'react';
+// import './Orders.css';
+// import { db } from '../firebase';
+// import { useStateValue } from '../StateProvider';
+// import Order from './Order';
+
+// const Orders = () => {
+//     const [{ user }] = useStateValue();
+//     const [orders, setOrders] = useState([]);
+
+//     useEffect(() => {
+//         if (orders) {
+//             db
+//             .collection('users')
+//             .doc(user?.uid)
+//             .collection('orders') // Fixed typo here
+//             .orderBy('created', 'desc')
+//             .onSnapshot(snapshot => (
+//                 setOrders(snapshot.docs.map(doc => ({
+//                     id: doc.id,
+//                     data: doc.data(),
+//                 })))
+//             ));
+//         } else {
+//             setOrders([]);
+//         }
+//     }, [user]);
+
+//     return (
+//         <div className="orders">
+//             <h1>Your Orders</h1>
+//             <div className="orders_order">
+//                 {orders.length === 0 ? (
+//                     <p>No orders found.</p>
+//                 ) : (
+//                     orders.map(order => (
+//                         <Order key={order.id} order={order} /> // Added key prop
+//                     ))
+//                 )}
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default Orders;
