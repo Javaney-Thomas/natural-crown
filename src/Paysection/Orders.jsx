@@ -3,6 +3,7 @@ import { db } from '../firebase';
 import './Orders.css';
 import { useStateValue } from '../StateProvider';
 import Order from './Order';
+import gleavesborder from "../components/materials/gleavesborder.jpg";
 
 const Orders = () => {
     const [orders, setOrders] = useState([]);
@@ -26,7 +27,14 @@ const Orders = () => {
     }, []);
 
     return (
-        <div className="orders">
+        <div className="orders"
+        style={{
+            display: "flex",
+            backgroundImage: `url(${gleavesborder})`,
+            backgroundRepeat: 'repeat-y',
+            backgroundSize: 'cover',
+            height: '130vh'}}
+        >
             <h2>Your Orders</h2>
             <div className="orders_list">
                 {orders.map(order => (
